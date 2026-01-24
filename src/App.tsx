@@ -1,11 +1,41 @@
 import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { chapters } from './data/chapters'
+import type { Chapter } from './data/chapters'
 import { locations} from './data/locations'
-import { useEffect } from 'react'
-import { useMap } from 'react-leaflet'
 import type { Location } from './data/locations'
+import { useMap } from 'react-leaflet'
+
+function getPovIndex(chapters: Chapter[], current: Chapter) {
+  return ( 
+    chapters
+      .filter(ch => ch.pov === current.pov)
+      .findIndex(ch => ch.id === current.id) + 1
+  )
+}
+function toRoman(num: number): string {
+  const map: [number, string][] = [
+    [50, "L"],
+    [40, "XL"],
+    [10, "X"],
+    [9, "IX"],
+    [5, "V"],
+    [4, "IV"],
+    [1, "I"],
+  ]
+
+  let result = ''
+
+  for (const [value, numberal] of map) {
+    while (num >= value) {
+      result += numberal
+      num -= value
+    }
+  }
+
+  return result
+}
 
 function FlyToLocation({ location }: { location: Location | null }) {
   const map = useMap()
@@ -53,7 +83,7 @@ export default function App() {
             onClick={() => setActiveLocation(locationsMap[ch.locationId])}
             style={{ display: 'block'}}
           >
-            {ch.pov} - Ch {ch.chapter}
+            {ch.pov.split(' ')[0]} {toRoman(getPovIndex(chapters, ch))}
           </button>
         ))}
       </div>

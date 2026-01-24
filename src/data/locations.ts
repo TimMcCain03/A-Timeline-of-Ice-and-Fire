@@ -6,16 +6,59 @@ export type Location = {
 }
 
 export const locations: Location[] = [
+    // the north
+    {
+        id: "haunted_forest",
+        name: "Haunted Forest",
+        x: 900,
+        y: 3490,
+    },
+    {
+        id: 'hills_north_winterfell',
+        name: "Hills North of Winterfell",
+        x: 700,
+        y: 3010,
+    },
+    {
+        id: 'winterfell_godswood',
+        name: "Godswood of Winterfell",
+        x: 682,
+        y: 2930,
+    },
     {
         id: 'winterfell',
         name: 'Winterfell',
-        x: 1300,
-        y:1100,  
+        x: 682,
+        y: 2930,  
     },
+
+    // the Iron Islands
+
+    // the riverlands
+    
+    // the vale of arryn
+    
+    // the westerlands
+    
+    // the crownlands
     {
         id: 'kings_landing',
         name: "King's Landing",
-        x: 2400,
-        y: 2800,
+        x: 922,
+        y: 1638,
+    },
+
+    // the reach
+    
+    // the stromlands
+
+    // dorne
+
+    // essos
+    {
+        id: 'pentos',
+        name: 'Pentos',
+        x: 1640,
+        y: 1660,
     },
 ]
