@@ -20,12 +20,6 @@ export const locations: Location[] = [
         y: 3010,
     },
     {
-        id: 'winterfell_godswood',
-        name: "Godswood of Winterfell",
-        x: 682,
-        y: 2930,
-    },
-    {
         id: 'winterfell',
         name: 'Winterfell',
         x: 682,

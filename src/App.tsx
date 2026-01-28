@@ -3,46 +3,16 @@ import L from 'leaflet'
 import { useState, useEffect } from 'react'
 import { chapters } from './data/chapters'
 import type { Chapter } from './data/chapters'
-import { locations} from './data/locations'
+import { locations } from './data/locations'
 import type { Location } from './data/locations'
 import { useMap } from 'react-leaflet'
-
-function getPovIndex(chapters: Chapter[], current: Chapter) {
-  return ( 
-    chapters
-      .filter(ch => ch.pov === current.pov)
-      .findIndex(ch => ch.id === current.id) + 1
-  )
-}
-function toRoman(num: number): string {
-  const map: [number, string][] = [
-    [50, "L"],
-    [40, "XL"],
-    [10, "X"],
-    [9, "IX"],
-    [5, "V"],
-    [4, "IV"],
-    [1, "I"],
-  ]
-
-  let result = ''
-
-  for (const [value, numberal] of map) {
-    while (num >= value) {
-      result += numberal
-      num -= value
-    }
-  }
-
-  return result
-}
 
 function FlyToLocation({ location }: { location: Location | null }) {
   const map = useMap()
 
   useEffect(() => {
     if (location) {
-      map.flyTo([location.y, location.x], -1, { duration: 1.2 })
+      map.flyTo([location.y, location.x], 1, { duration: 1.2 })
     }
   }, [location, map])
 
@@ -61,11 +31,38 @@ const locationsMap = Object.fromEntries(
 )
 
 export default function App() {
+  const [activeChapter, setActiveChapter] = useState<Chapter | null>(null)
   const [activeLocation, setActiveLocation] = 
     useState<null | typeof locations[number]>(null)
 
   return (
     <>
+      {activeChapter && (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            background: 'white',
+            padding: '16px',
+            borderTop: '1px solid #ddd',
+            color: 'black',
+            zIndex: 1000,
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>
+            {activeChapter.pov.split(' ')[0]}{' '}
+          </h2>
+          <p>
+            <strong>Location:</strong>{" "}
+            {locationsMap[activeChapter.locationId].name}
+          </p>
+          <p style={{ lineHeight: 1.4 }}>
+           {activeChapter.summary}
+          </p>
+        </div>
+      )}
       <div 
         style={{
           position: 'absolute',
@@ -80,10 +77,13 @@ export default function App() {
         {chapters.map(ch => (
           <button 
             key={ch.id}
-            onClick={() => setActiveLocation(locationsMap[ch.locationId])}
+            onClick={() => {
+              setActiveChapter(ch)
+              setActiveLocation(locationsMap[ch.locationId])
+            }}
             style={{ display: 'block'}}
           >
-            {ch.pov.split(' ')[0]} {toRoman(getPovIndex(chapters, ch))}
+            {ch.chapterTitle}
           </button>
         ))}
       </div>
