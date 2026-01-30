@@ -108,4 +108,13 @@ export const chapters: Chapter[] = [
         locationId: 'winterfell',
         summary: "Tyrion meets up with his nephew Joffrey and insists he pay his sympathies to the Starks, before joining his brother and sister for breakfast with news that Bran Stark will probably survive."
     },
+    {
+        id: 'agot_john_2',
+        pov: 'John Snow',
+        book: 'AGOT',
+        chapter: 10,
+        chapterTitle: "John II",
+        locationId: 'winterfell',
+        summary: "Jon says his last goodbyes, first to the comatose Bran, then to Robb, and finally to Arya, to whom he gives a Braavosi-type sword."
+    },
 ]
