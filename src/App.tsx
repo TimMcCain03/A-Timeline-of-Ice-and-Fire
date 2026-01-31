@@ -1,11 +1,22 @@
 import { MapContainer, ImageOverlay, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet'
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import { useState, useEffect } from 'react'
 import { chapters } from './data/chapters'
 import type { Chapter } from './data/chapters'
 import { locations } from './data/locations'
 import type { Location } from './data/locations'
 import { useMap } from 'react-leaflet'
+
+delete (L.Icon.Default.prototype as any)._getIconUrl
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+})
 
 function FlyToLocation({ location }: { location: Location | null }) {
   const map = useMap()
@@ -94,7 +105,7 @@ export default function App() {
           zoom={0}
           style={{ height: '100%', width: '100%' }}
         >
-          <ImageOverlay url="/maps/westeros.jpg" bounds={bounds}/>
+          <ImageOverlay url="./maps/westeros.jpg" bounds={bounds}/>
 
           {locations.map(loc => (
             <Marker key={loc.id} position={[loc.y, loc.x]}>
