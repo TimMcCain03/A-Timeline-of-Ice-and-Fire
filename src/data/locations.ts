@@ -25,6 +25,12 @@ export const locations: Location[] = [
         x: 682,
         y: 2930,  
     },
+    {
+        id: 'barrowlands',
+        name: 'Barrowlands',
+        x: 675,
+        y: 2730,
+    },
 
     // the Iron Islands
 
@@ -55,4 +61,10 @@ export const locations: Location[] = [
         x: 1640,
         y: 1660,
     },
+    {
+        id: 'outside_pentos',
+        name: 'Outside the walls of Pentos',
+        x: 1650,
+        y: 1670,
+    }
 ]

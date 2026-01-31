@@ -117,4 +117,22 @@ export const chapters: Chapter[] = [
         locationId: 'winterfell',
         summary: "Jon says his last goodbyes, first to the comatose Bran, then to Robb, and finally to Arya, to whom he gives a Braavosi-type sword."
     },
+    {
+        id: 'agot_daenerys_2',
+        pov: 'Daenerys Targaryen',
+        book: 'AGOT',
+        chapter: 11,
+        chapterTitle: "Daenerys II",
+        locationId: 'outside_pentos',
+        summary: "The wedding of Drogo and Daenerys Targaryen outside Pentos lasts all day. When night falls, Drogo takes Daenerys for a long ride before making love."
+    },
+    {
+        id: 'agot_eddard_2',
+        pov: 'Ned Stark',
+        book: 'AGOT',
+        chapter: 12,
+        chapterTitle: "Ned II",
+        locationId: 'barrowlands',
+        summary: "Ned and King Robert discuss the threat posed by Daenerys Targaryen's marriage and the events surrounding the Sack of King's Landing."
+    },
 ]
