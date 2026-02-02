@@ -22,7 +22,7 @@ export const locations: Location[] = [
     },
     {
         id: "wolfswood",
-        name: "WolfswoodS",
+        name: "Wolfswood",
         x: 0,
         y: 0,
     },
@@ -61,8 +61,8 @@ export const locations: Location[] = [
         y: 1990,
     },
     {
-        id: "derry",
-        name: "Derry",
+        id: "darry",
+        name: "Darry",
         x: 0,
         y: 0,
     },
