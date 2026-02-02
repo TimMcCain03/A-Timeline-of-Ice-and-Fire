@@ -6,12 +6,25 @@ export type Location = {
 }
 
 export const locations: Location[] = [
+    // the wall
+    {
+        id: "castle_black",
+        name: "Castle Black",
+        x: 0,
+        y: 0,
+    },
     // the north
     {
         id: "haunted_forest",
         name: "Haunted Forest",
         x: 900,
         y: 3490,
+    },
+    {
+        id: "wolfswood",
+        name: "WolfswoodS",
+        x: 0,
+        y: 0,
     },
     {
         id: 'hills_north_winterfell',
@@ -47,8 +60,31 @@ export const locations: Location[] = [
         x: 846,
         y: 1990,
     },
+    {
+        id: "derry",
+        name: "Derry",
+        x: 0,
+        y: 0,
+    },
     // the vale of arryn
-    
+    {
+        id: "high_road_to_eyrie",
+        name: "High Road to the Eyrie",
+        x: 0,
+        y: 0,
+    },
+    {
+        id: "high_road_to_the_mountians_of_the_moon",
+        name: "High Road to the Mountains of the Moon",
+        x: 0,
+        y: 0,
+    },
+    {
+        id: "the_bloody_gate",
+        name: "The Bloody Gate",
+        x: 0,
+        y: 0,
+    },
     // the westerlands
     
     // the crownlands
@@ -77,5 +113,17 @@ export const locations: Location[] = [
         name: 'Outside the walls of Pentos',
         x: 1650,
         y: 1670,
+    },
+    {
+        id: "dothraki_sea",
+        name: "Dothraki Sea",
+        x: 0,
+        y: 0,
+    },
+    {
+        id: "vaes_dothrak",
+        name: "Vaes Dothrak",
+        x: 0,
+        y: 0,
     }
 ]
