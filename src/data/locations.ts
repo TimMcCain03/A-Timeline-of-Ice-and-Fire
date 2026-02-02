@@ -31,11 +31,22 @@ export const locations: Location[] = [
         x: 675,
         y: 2730,
     },
+    {
+        id: "kingsroad_to_castleblack",
+        name: "King's Road to Castle Black",
+        x: 885,
+        y: 3240,
+    },
 
     // the Iron Islands
 
     // the riverlands
-    
+    {
+        id: "inn_at_the_crossroads",
+        name: "Inn at the Crossroads",
+        x: 846,
+        y: 1990,
+    },
     // the vale of arryn
     
     // the westerlands

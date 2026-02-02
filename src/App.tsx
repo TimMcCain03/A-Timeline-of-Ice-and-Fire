@@ -42,9 +42,20 @@ const locationsMap = Object.fromEntries(
 )
 
 export default function App() {
-  const [activeChapter, setActiveChapter] = useState<Chapter | null>(null)
-  const [activeLocation, setActiveLocation] = 
-    useState<null | typeof locations[number]>(null)
+  const [activeLocation, setActiveLocation] =
+    useState<Location | null>(null)
+
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null)
+
+  const activeChapter =
+    currentIndex !== null ? chapters[currentIndex] : null
+
+  useEffect(() => {
+    if (!activeChapter) return
+
+    const loc = locationsMap[activeChapter.locationId]
+    if (loc) setActiveLocation(loc)
+  }, [activeChapter])
 
   return (
     <>
@@ -63,18 +74,44 @@ export default function App() {
           }}
         >
           <h2 style={{ marginTop: 0 }}>
-            {activeChapter.pov.split(' ')[0]}{' '}
+            {activeChapter.pov.split(' ')[0]}
           </h2>
+
           <p>
-            <strong>Location:</strong>{" "}
-            {locationsMap[activeChapter.locationId].name}
+            <strong>Location:</strong>{' '}
+            {locationsMap[activeChapter.locationId]?.name}
           </p>
-          <p style={{ lineHeight: 1.4 }}>
-           {activeChapter.summary}
-          </p>
+
+          <p>{activeChapter.summary}</p>
+
+          <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+            <button
+              onClick={() =>
+                setCurrentIndex(i => (i !== null && i > 0 ? i - 1 : i))
+              }
+              disabled={currentIndex === null || currentIndex === 0}
+            >
+              ⏮ Previous
+            </button>
+
+            <button
+              onClick={() =>
+                setCurrentIndex(i =>
+                  i !== null && i < chapters.length - 1 ? i + 1 : i
+                )
+              }
+              disabled={
+                currentIndex === null ||
+                currentIndex === chapters.length - 1
+              }
+            >
+              Next ⏭
+            </button>
+          </div>
         </div>
       )}
-      <div 
+
+      <div
         style={{
           position: 'absolute',
           top: 10,
@@ -85,19 +122,31 @@ export default function App() {
           borderRadius: '6px',
         }}
       >
-        {chapters.map(ch => (
-          <button 
-            key={ch.id}
-            onClick={() => {
-              setActiveChapter(ch)
-              setActiveLocation(locationsMap[ch.locationId])
-            }}
-            style={{ display: 'block'}}
-          >
-            {ch.chapterTitle}
-          </button>
-        ))}
+        <label style={{ display: 'block', marginBottom: '4px' }}>
+          Jump to chapter:
+        </label>
+
+        <select
+          value={currentIndex ?? ''}
+          onChange={(e) => setCurrentIndex(Number(e.target.value))}
+          style={{
+            width: '220px',
+            padding: '4px',
+          }}
+        >
+          <option value="" disabled>
+            Select a chapter…
+          </option>
+
+          {chapters.map((ch, index) => (
+            <option key={ch.id} value={index}>
+              {ch.chapterTitle}
+            </option>
+          ))}
+        </select>
       </div>
+
+
       <div style={{ height: '100vh', width: '100vw' }}>
         <MapContainer
           crs={L.CRS.Simple}
@@ -105,7 +154,7 @@ export default function App() {
           zoom={0}
           style={{ height: '100%', width: '100%' }}
         >
-          <ImageOverlay url="./maps/westeros.jpg" bounds={bounds}/>
+          <ImageOverlay url="./maps/westeros.jpg" bounds={bounds} />
 
           {locations.map(loc => (
             <Marker key={loc.id} position={[loc.y, loc.x]}>
@@ -119,3 +168,4 @@ export default function App() {
     </>
   )
 }
+

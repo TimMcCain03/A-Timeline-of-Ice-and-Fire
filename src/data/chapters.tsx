@@ -135,4 +135,31 @@ export const chapters: Chapter[] = [
         locationId: 'barrowlands',
         summary: "Ned and King Robert discuss the threat posed by Daenerys Targaryen's marriage and the events surrounding the Sack of King's Landing."
     },
+    {
+        id: 'agot_tyrion_2',
+        pov: 'Tryion Lanister',
+        book: 'AGOT',
+        chapter: 13,
+        chapterTitle: "Tryion II",
+        locationId: 'kingsroad_to_castleblack',
+        summary: "As they travel north, Tyrion and Jon Snow argue about the realities of life on the Wall."
+    },
+    {
+        id: 'agot_catlyn_3',
+        pov: 'Catlyn Stark',
+        book: 'AGOT',
+        chapter: 14,
+        chapterTitle: "Catlyn III",
+        locationId: 'winterfell',
+        summary: "Catelyn's breakdown over Bran's fall ends when an attempt is made on Bran's life. Catelyn delays the assassin long enough for Bran's direwolf to arrive and kill the assassin. Catelyn is now convinced Bran did not fall, but was pushed."
+    },
+    {
+        id: 'agot_sansa_1',
+        pov: 'Sansa Stark',
+        book: 'AGOT',
+        chapter: 15,
+        chapterTitle: "Sansa I",
+        locationId: 'inn_at_the_crossroads',
+        summary: "After exploring the camp, Sansa Stark goes riding with her betrothed, Prince Joffrey. Near the ruby ford, they come upon Arya Stark and a butcher's boy play-fighting. Joffrey begins to torment the boy until Arya attacks him."
+    },
 ]
