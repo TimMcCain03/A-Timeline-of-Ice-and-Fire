@@ -10,21 +10,22 @@ export const locations: Location[] = [
     {
         id: "castle_black",
         name: "Castle Black",
-        x: 0,
-        y: 0,
+        x: 896,
+        y: 3410,
     },
-    // the north
     {
         id: "haunted_forest",
         name: "Haunted Forest",
         x: 900,
         y: 3490,
     },
+
+    // the north    
     {
         id: "wolfswood",
         name: "Wolfswood",
-        x: 0,
-        y: 0,
+        x: 600,
+        y: 2980,
     },
     {
         id: 'hills_north_winterfell',
@@ -63,27 +64,33 @@ export const locations: Location[] = [
     {
         id: "darry",
         name: "Darry",
-        x: 0,
-        y: 0,
+        x: 846,
+        y: 1990,
     },
     // the vale of arryn
     {
         id: "high_road_to_eyrie",
         name: "High Road to the Eyrie",
-        x: 0,
-        y: 0,
+        x: 930,
+        y: 2050,
     },
     {
         id: "high_road_to_the_mountians_of_the_moon",
         name: "High Road to the Mountains of the Moon",
-        x: 0,
-        y: 0,
+        x: 970,
+        y: 2072,
     },
     {
         id: "the_bloody_gate",
         name: "The Bloody Gate",
-        x: 0,
-        y: 0,
+        x: 995,
+        y: 2080,
+    },
+    {
+        id: "the_eyrie",
+        name: "The Eyrie",
+        x: 1013,
+        y: 2119,
     },
     // the westerlands
     
@@ -117,13 +124,13 @@ export const locations: Location[] = [
     {
         id: "dothraki_sea",
         name: "Dothraki Sea",
-        x: 0,
-        y: 0,
+        x: 2800,
+        y: 1350,
     },
     {
         id: "vaes_dothrak",
         name: "Vaes Dothrak",
-        x: 0,
-        y: 0,
+        x: 4246,
+        y: 1840,
     }
 ]

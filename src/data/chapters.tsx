@@ -6,6 +6,7 @@ export type Chapter = {
   chapterTitle: string
   locationId: string
   summary: string
+//   icon?: string
 }
 
 export const chapters: Chapter[] = [

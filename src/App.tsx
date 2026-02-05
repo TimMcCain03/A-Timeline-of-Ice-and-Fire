@@ -22,7 +22,7 @@ function FlyToLocation({ location }: { location: Location | null }) {
 
   useEffect(() => {
     if (location) {
-      map.flyTo([location.y, location.x], 1, { duration: 1.2 })
+      map.flyTo([location.y, location.x], 1.5, { duration: 1.2 })
     }
   }, [location, map])
 
@@ -151,15 +151,32 @@ export default function App() {
           crs={L.CRS.Simple}
           bounds={bounds}
           zoom={0}
+          zoomControl={false}
           style={{ height: '100%', width: '100%' }}
         >
           <ImageOverlay url="./maps/westeros.jpg" bounds={bounds} />
 
-          {locations.map(loc => (
-            <Marker key={loc.id} position={[loc.y, loc.x]}>
-              <Popup>{loc.name}</Popup>
-            </Marker>
-          ))}
+          {locations.map(loc => {
+            // might not use any of this idk
+            //
+            // const icon = loc.icon
+            //   ? L.icon({
+            //       iconUrl: loc.icon,
+            //       iconSize: [32, 37],
+            //       iconAnchor: [16, 37],
+            //       popupAnchor: [0, -28],
+            //       shadowUrl: markerShadow,
+            //     })
+            //   : undefined
+            //
+            // add to Maker below when chap icons is fixed "icon={icon}""
+
+            return (
+              <Marker key={loc.id} position={[loc.y, loc.x]}>
+                <Popup>{loc.name}</Popup>
+              </Marker>
+            )
+          })}
 
           <FlyToLocation location={activeLocation} />
         </MapContainer>
@@ -167,5 +184,3 @@ export default function App() {
     </>
   )
 }
-
-// test
