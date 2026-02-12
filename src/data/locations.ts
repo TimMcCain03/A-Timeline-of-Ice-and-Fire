@@ -19,7 +19,12 @@ export const locations: Location[] = [
         x: 900,
         y: 3490,
     },
-
+    {
+        id: "moles_town",
+        name: "Moles Town",
+        x: 0,
+        y: 0,
+    },
     // the north    
     {
         id: "wolfswood",
@@ -51,6 +56,12 @@ export const locations: Location[] = [
         x: 885,
         y: 3240,
     },
+    {
+        id: "moat_cailin",
+        name: "Moat Cailin",
+        x: 0,
+        y: 0,
+    },
 
     // the Iron Islands
 
@@ -62,10 +73,34 @@ export const locations: Location[] = [
         y: 1990,
     },
     {
+        id: "green_fork_of_the_trident",
+        name: "Green Fork of the Trident",
+        x: 0,
+        y: 0,
+    },
+    {
         id: "darry",
         name: "Darry",
         x: 846,
         y: 1990,
+    },
+    {
+        id: "twins",
+        name: "The Twins",
+        x: 0,
+        y: 0,
+    },
+    {
+        id: "the_whispering_wood",
+        name: "The Whispering Wood",
+        x: 0,
+        y: 0,
+    },
+    {
+        id: "riverrun",
+        name: "Riverrun",
+        x: 0,
+        y: 0,
     },
     // the vale of arryn
     {
@@ -128,9 +163,21 @@ export const locations: Location[] = [
         y: 1350,
     },
     {
+        id: "dothraki_sea_2",
+        name: "Dothraki Sea",
+        x: 0,
+        y: 0,
+    },
+    {
         id: "vaes_dothrak",
         name: "Vaes Dothrak",
         x: 4246,
         y: 1840,
-    }
+    },
+    {
+        id: "lhazareen_town_dothraki_sea",
+        name: "Lhazareen Town in the Dothraki Sea",
+        x: 0,
+        y: 0,
+    },
 ]
