@@ -46,6 +46,18 @@ export default function App() {
 
   const [currentIndex, setCurrentIndex] = useState<number | null>(null)
 
+  const [showInitialModal, setShowInitialModal] = useState(true)
+
+  const [selectedChapterForModal, setSelectedChapterForModal] = useState<number | null>(null)
+
+  const [selectedBook, setSelectedBook] = useState<string | null>(null)
+
+  const uniqueBooks = [...new Set(chapters.map(ch => ch.book))].sort()
+
+  const chaptersForSelectedBook = selectedBook
+    ? chapters.filter(ch => ch.book === selectedBook)
+    : []
+
   const activeChapter =
     currentIndex !== null ? chapters[currentIndex] : null
 
@@ -58,6 +70,132 @@ export default function App() {
 
   return (
     <>
+      {showInitialModal && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0, 0, 0, 0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2000,
+          }}
+        >
+          <div
+            style={{
+              background: 'white',
+              padding: '32px',
+              borderRadius: '8px',
+              maxWidth: '500px',
+              textAlign: 'center',
+              color: 'black',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.3)',
+            }}
+          >
+            <h2 style={{ marginTop: 0, marginBottom: '16px' }}>
+              Welcome to the Map
+            </h2>
+            <p style={{ marginBottom: '24px', fontSize: '16px' }}>
+              How would you like to start?
+            </p>
+
+            <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
+              <button
+                onClick={() => {
+                  setCurrentIndex(0)
+                  setShowInitialModal(false)
+                }}
+                style={{
+                  padding: '10px 16px',
+                  fontSize: '16px',
+                  background: '#666',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                }}
+              >
+                Start at the Beginning
+              </button>
+
+              <div style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
+                <select
+                  value={selectedBook ?? ''}
+                  onChange={(e) => {
+                    setSelectedBook(e.target.value || null)
+                    setSelectedChapterForModal(null) // Reset chapter when book changes
+                  }}
+                  style={{
+                    padding: '8px',
+                    fontSize: '14px',
+                    borderRadius: '4px',
+                    border: '1px solid #ccc',
+                  }}
+                >
+                  <option value='' disabled>
+                    Choose a book...
+                  </option>
+                  {uniqueBooks.map(book => (
+                    <option key={book} value={book}>
+                      {book}
+                    </option>
+                  ))}
+                </select>
+
+                {selectedBook && (
+                  <div style={{ display: 'flex', gap: '8px' }}>
+                    <select 
+                      value={selectedChapterForModal ?? ''}
+                      onChange={(e) => setSelectedChapterForModal(Number(e.target.value))}
+                      style={{
+                        flex: 1,
+                        padding: '8px',
+                        fontSize: '14px',
+                        borderRadius: '4px',
+                        border: '1px solid #ccc',
+                      }}
+                    >
+                      <option value='' disabled>
+                        Choose a chapter...
+                      </option>
+                      {chaptersForSelectedBook.map((ch, idx) => (
+                        <option key={ch.id} value={chapters.indexOf(ch)}>
+                          {ch.chapterTitle}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      onClick={() => {
+                        if (selectedChapterForModal !== null) {
+                          setCurrentIndex(selectedChapterForModal)
+                          setShowInitialModal(false)
+                        }
+                      }}
+                      disabled={selectedChapterForModal === null}
+                      style={{
+                        padding: '8px 16px',
+                        fontSize: '14px',
+                        background: selectedChapterForModal !== null ? '#666' : '#ccc',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '4px',
+                        cursor: selectedChapterForModal !== null ? 'pointer' : 'not-allowed',
+                      }}
+                    >
+                      Go
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {activeChapter && (
         <div
           style={{
