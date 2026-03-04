@@ -676,4 +676,121 @@ export const chapters: Chapter[] = [
         locationId: 'dothraki_sea_2',
         summary: "Daenerys builds a funeral pyre for Drogo and places her dragon eggs among his treasures. When she attempts to take control of the few remaining Dothraki as a khal would, she is refused. As night falls, Daenerys lights the pyre and is drawn by instinct deep into the inferno. When the pyre dies, the others find her unburnt and nursing the first three baby dragons in hundreds of years.",
     },
+    {
+        id: 'agot_prolouge',
+        pov: 'Will',
+        book: 'AGOT',
+        chapter: 0,
+        chapterTitle: "Prologue",
+        locationId: 'haunted_forest',
+        summary: "While tracking a group of wildling raiders beyond the Wall, three rangers of the Night's Watch encounter a group of Others. "
+    },
+    {
+	id: 'acok_prolouge',
+	pov: "Maester_Cressen",
+	book: 'ACOK',
+	chapter: 0,
+	chapterTitle: 'Prologue',
+	locationId: 'dragonstone',
+	summary: 'Maester Cressen broods on the omens all around him on Dragonstone. When news arrives that the storm lords will not support Stannis Baratheon’s quest for the Iron Throne, Cressen comes into conflict with Queen Selyse and the red priestess Melisandre over what course to take. In a desperate attempt to kill Melisandre, Cressen shares poison wine with her, but dies while she remains unaffected.'
+    },
+    {
+	id: 'acok_arya_1',
+	pov: "Arya Stark",
+	book: 'ACOK',
+	chapter: 1,
+	chapterTitle: 'Arya I',
+	locationId: 'kingsroad_north_of_kingslanding',
+	summary: "Arya Stark is travelling north with Yoren of the Night's Watch, disguised as a boy. When the orphan boy known as Hot Pie tries to steal her sword “Needle,” Arya beats him bloody. Yoren takes her aside for punishment and reveals that her father was supposed to be allowed to take the black, rather than be executed."
+    },
+    {
+	id: 'acok_sansa_1',
+	pov: "Sansa Stark",
+	book: 'ACOK',
+	chapter: 2,
+	chapterTitle: 'Sansa I',
+	locationId: 'kings_landing',
+	summary: "Sansa Stark attends the tourney on King Joffrey's name day. After several poor contests, Joffrey becomes enraged when Ser Dontos Hollard arrives half naked and too drunk to compete. Sansa manages to convince Joffrey to make Dontos his new fool instead of executing him. Afterward, while Prince Tommen is riding against a quintain, Tyrion Lannister arrives to assume his position as acting Hand of the King."
+    },
+    {
+	id: 'acok_tyrion_1',
+	pov: "Tyrion Lannister",
+	book: 'ACOK',
+	chapter: 3,
+	chapterTitle: 'Tyrion I',
+	locationId: 'kings_landing',
+	summary: 'Tyrion Lannister meets with the small council and assumes his position as acting Hand of the King. After dismissing the council, he and Cersei discuss all that has happened in King’s Landing, and Cersei grudgingly accepts him as Hand. Later, Tyrion travels to the Broken Anvil, where he has finds Varys has already discovered his mistress Shae.'
+    },
+    {
+	id: 'acok_bran_1',
+	pov: "Bran Stark",
+	book: 'ACOK',
+	chapter: 4,
+	chapterTitle: 'Bran I',
+	locationId: 'winterfell',
+	summary: 'Prince Bran Stark contemplates the red comet and listens to the direwolves howling in Winterfell, wondering about the reasons behind it all. He resents his broken body and the arrival of Big Walder and Little Walder Frey, whom he blames for Summer and Shaggydog being locked up. When he tells Maester Luwin about his wolf dreams, Luwin gives him a sleeping draught to stop the dreams, but that night he dreams he is Summer trapped in the godswood.'
+    },
+    {
+	id: 'acok_arya_2',
+	pov: "Arya Stark",
+	book: 'ACOK',
+	chapter: 5,
+	chapterTitle: 'Arya II',
+	locationId: 'inn_on_the_kingsroad',
+	summary: "Arya Stark is travelling north with Yoren of the Night's Watch, disguised as a boy. When the orphan boy known as Hot Pie tries to steal her sword “Needle,” Arya beats him bloody. Yoren takes her aside for punishment and reveals that her father was supposed to be allowed to take the black, rather than be executed."
+    },
+    {
+	id: 'acok_jon_2',
+	pov: "Jon Snow",
+	book: 'ACOK',
+	chapter: 6,
+	chapterTitle: 'Jon I',
+	locationId: 'castle_black',
+	summary: 'Jon Snow finds Samwell Tarly in the dark library cellar of Castle Black, where Sam has found a number of maps for the great ranging. Out in the courtyard they watch the new recruits practicing and Jon talks with Donal Noye. After they present their maps, Lord Commander Jeor Mormont discusses Maester Aemon’s past with Jon.'
+    },
+    {
+	id: 'acok_catelyn_1',
+	pov: "Catelyn Stark",
+	book: 'ACOK',
+	chapter: 7,
+	chapterTitle: 'Catelyn I',
+	locationId: 'riverrun',
+	summary: 'Catelyn Stark watches as her son King Robb Stark presents his peace terms to his envoy Ser Cleos Frey. Afterward, Catelyn argues with Robb over his refusal to exchange Jaime Lannister and his plan to send Theon Greyjoy back to the Iron Islands. Later, Catelyn discusses the war with Brynden Tully and they plan an alliance with King Renly Baratheon.'
+    },
+    {
+	id: 'acok_tyrion_2',
+	pov: "Tyrion Lannister",
+	book: 'ACOK',
+	chapter: 8,
+	chapterTitle: 'Tyrion II',
+	locationId: 'kings_landing',
+	summary: "Tyrion dines with Lord Janos Slynt. They discuss the murder of King Robert's bastard daughter, Eddard Stark’s execution, and candidates for Commander of the City Watch. Tyrion then has Slynt taken into custody to join the Night's Watch. Afterward, he discusses the same topics with Varys."
+    },
+    {
+	id: 'acok_arya_3',
+	pov: "Arya Stark",
+	book: 'ACOK',
+	chapter: 9,
+	chapterTitle: 'Arya III',
+	locationId: 'south_of_gods_eye',
+	summary: 'Arya and the others have abandoned the kingsroad to avoid the gold cloaks. As they travel west they come upon a burned village. When Arya goes to make water in the forest, she runs into a wolf pack, which scares her. She reports this to Yoren, who laments they should have taken a ship instead.'
+    },
+    {
+	id: 'acok_davos_1',
+	pov: "Davos Seaworth",
+	book: 'ACOK',
+	chapter: 10,
+	chapterTitle: 'Davos I',
+	locationId: 'dragonstone',
+	summary: "Davos Seaworth watches the burning of the Seven. Entering the fire, Stannis Baratheon draws out the sword Lightbringer and Melisandre proclaims him Azor Ahai reborn. Later, Davos hears new of the war from the pirate Salladhor Saan, who insists Stannis' new sword is not the true Lightbringer. That night, Davos and Stannis discuss his plan to claim the Iron Throne. When Davos asks why he supports Melisandre's foreign god, Stannis explains that he means to discover Melisandre's true power."
+    },
+    {
+	id: 'acok_theon_1',
+	pov: "Theon Greyjoy",
+	book: 'ACOK',
+	chapter: 11,
+	chapterTitle: 'Theon I',
+	locationId: 'pyke',
+	summary: "After an absence of ten years, Theon Greyjoy arrives back home on the island Pyke aboard the Myraham. He docks at Lordsport and is disappointed to discover that his father, Lord Balon Greyjoy, has send only Theon's uncle Aeron, a priest of the Drowned God, to escort him to Balon's castle. At Pyke, Theon is greeted coldly by his father, after which he presents Balon with Robb Stark’s letter. Balon rejects the proposed alliance with Robb, instead insisting that he will pay the iron price and carve out a kingdom of his own."
+    },
 ]
