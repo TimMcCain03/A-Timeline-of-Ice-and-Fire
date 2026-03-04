@@ -22,8 +22,8 @@ export const locations: Location[] = [
     {
         id: "moles_town",
         name: "Moles Town",
-        x: 0,
-        y: 0,
+        x: 900,
+        y: 3390,
     },
     // the north    
     {
@@ -59,8 +59,8 @@ export const locations: Location[] = [
     {
         id: "moat_cailin",
         name: "Moat Cailin",
-        x: 0,
-        y: 0,
+        x: 686,
+        y: 2561,
     },
 
     // the Iron Islands
@@ -72,12 +72,12 @@ export const locations: Location[] = [
         x: 846,
         y: 1990,
     },
-    {
-        id: "green_fork_of_the_trident",
-        name: "Green Fork of the Trident",
-        x: 0,
-        y: 0,
-    },
+    // {
+    //     id: "green_fork_of_the_trident",
+    //     name: "Green Fork of the Trident",
+    //     x: 0,
+    //     y: 0,
+    // },
     {
         id: "darry",
         name: "Darry",
@@ -87,20 +87,20 @@ export const locations: Location[] = [
     {
         id: "twins",
         name: "The Twins",
-        x: 0,
-        y: 0,
+        x: 644,
+        y: 2225,
     },
     {
         id: "the_whispering_wood",
         name: "The Whispering Wood",
-        x: 0,
-        y: 0,
+        x: 620,
+        y: 2100,
     },
     {
         id: "riverrun",
         name: "Riverrun",
-        x: 0,
-        y: 0,
+        x: 583,
+        y: 1975,
     },
     // the vale of arryn
     {
@@ -135,6 +135,12 @@ export const locations: Location[] = [
         name: "King's Landing",
         x: 922,
         y: 1638,
+    },
+    {
+        id: 'dragonstone',
+        name: "Dragonstone",
+        x: 1212,
+        y: 1800,
     },
 
     // the reach

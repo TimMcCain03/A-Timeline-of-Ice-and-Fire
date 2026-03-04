@@ -583,7 +583,7 @@ export const chapters: Chapter[] = [
         book: 'AGOT',
         chapter: 62,
         chapterTitle: 'Tyrion VIII',
-        locationId: 'green_fork_of_the_trident',
+        locationId: 'inn_at_the_crossroads',
         summary: "Tyrion meets his father’s army at the inn at the crossroads, escorted by 300 Vale mountain clansmen. Tyrion and Lord Tywin are discussing their war plans when Tyrion’s clansmen burst in, but Tywin handles them coolly. When news arrives that Robb Stark’s host is advancing, Tywin offers rich rewards to the clansmen if they fight for him.",
     },
     {
