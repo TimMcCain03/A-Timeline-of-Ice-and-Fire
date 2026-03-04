@@ -65,7 +65,7 @@ export default function App() {
             bottom: 0,
             left: 0,
             width: '100%',
-            background: 'white',
+            background: 'rgba(225, 225, 225, 0.5)',
             padding: '16px',
             borderTop: '1px solid #ddd',
             color: 'black',
