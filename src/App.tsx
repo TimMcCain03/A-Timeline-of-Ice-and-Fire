@@ -162,7 +162,7 @@ export default function App() {
                       <option value='' disabled>
                         Choose a chapter...
                       </option>
-                      {chaptersForSelectedBook.map((ch, idx) => (
+                      {chaptersForSelectedBook.map((ch) => (
                         <option key={ch.id} value={chapters.indexOf(ch)}>
                           {ch.chapterTitle}
                         </option>
@@ -211,7 +211,7 @@ export default function App() {
           }}
         >
           <h2 style={{ marginTop: 0 }}>
-            {activeChapter.pov.split(' ')[0]}
+            {activeChapter.pov}
           </h2>
 
           <p>
